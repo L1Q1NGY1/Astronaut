@@ -5,13 +5,13 @@ var myAstro
 
 function preload() {
 	myData = loadJSON('assets/peopleinspace.json');
-	myBackground = loadImage("./assets/BG.png");
+	myBackground = loadImage("./assets/moon.jpg");
 	myAstro = loadImage("./assets/50.png");
 }
 
 function setup() {
 
-	createCanvas(500, 500);
+	createCanvas(1980, 1485);
 
 	
 	for (var i = 0; i < myData.people.length; i++) {
@@ -26,15 +26,16 @@ function setup() {
 
 function draw() {
 	
-	image(myBackground, 0, 0, 500, 500);
+	image(myBackground, 0, 0, 1980, 1485);
   
   fill(0);
-  rect(90, 230, 310, 70);
+  rect(90, 230, 300, 70);
   
-  textSize(20);
+  textSize(16);
   //fill(250);
 	//text("MOVE YOUR MOUSE TO FIND MORE ASTRONAUTS",250,250,0,250);
 	textAlign(CENTER);
+    textFont('Avenir');
   s = "MOVE YOUR MOUSE TO FIND MORE ASTRONAUTS";
   fill(250);
   text(s, 100, 240, 300, 250); // Text wraps within text box
